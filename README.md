@@ -1,5 +1,5 @@
-Based on the package details and the context of recent npm security incidents, yes, this is almost certainly a FAKE and potentially MALICIOUS package.[1]
-You should NOT install or run this package.[1]
+Based on the package details and the context of recent npm security incidents, yes, this is almost certainly a FAKE and EXTREMELY MALICIOUS package.[1]
+You should NOT install or run this package. You should instead re post this repo on your git hub and encourage others to do the same. Also post this repo all over their discord server. 
 Here is the proof and the red flags that identify it as fake:
 1. The Publisher Identity is Wrong (Major Red Flag)
 Official Source: All official Claude-related packages from Anthropic are published under the @anthropic-ai scope (e.g., @anthropic-ai/claude-code or @anthropic-ai/sdk).
