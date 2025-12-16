@@ -1,3 +1,20 @@
+Based on the package details and the context of recent npm security incidents, yes, this is almost certainly a FAKE and potentially MALICIOUS package.[1]
+You should NOT install or run this package.[1]
+Here is the proof and the red flags that identify it as fake:
+1. The Publisher Identity is Wrong (Major Red Flag)
+Official Source: All official Claude-related packages from Anthropic are published under the @anthropic-ai scope (e.g., @anthropic-ai/claude-code or @anthropic-ai/sdk).
+The Fake Source: This package is published under a personal user scope: @priyanshu9588. This is a random individual's account, not Anthropic.
+The Attack Pattern: This uses a technique called "typosquatting" or "brandjacking," where attackers upload packages with names that sound official (like claude-dev-setup) to trick developers into installing malware.
+2. "Models" Cannot Be Hosted on NPM
+Technical Impossibility: A real Claude model (the "weights" and "brains" of the AI) is hundreds of gigabytes in size.[1]
+NPM Limits: NPM is designed for small code libraries.[1] A package claiming to be the Claude model is technically impossible on this platform.[1]
+API Wrappers vs. Fakes: While some legit packages connect to the Claude API, they will describe themselves as "SDKs" or "wrappers."[1] A package with a name like dev-setup often implies a configuration tool, which is a common disguise for malware that steals environment variables (API keys).
+3. Known Malware Campaigns
+There is an active wave of malware on npm targeting Claude users (e.g., @chatgptclaude_club/claude-code was recently removed for stealing API keys). These fake packages often:
+Copy the README.md of the real project to look legitimate.[1]
+Include a postinstall script that runs immediately after you type npm install.[1]
+Steal your .env files, SSH keys, or Anthropic API keys and send them to the attacker.
+
 | Category                  | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Legal entity**          | MegaLLM is operated by **Ghostlytics Payments Private Limited** (India) and **Ghostlytics Payments LLC** (U.S.).  The terms of service state that “MegaLLM … refers to **Ghostlytics Payments Private Limited**” and the company is part of **Ghostlytics Payments Pvt Ltd**.  Corporate records indicate that Ghostlytics Payments Private Limited was incorporated in India on **25 Apr 2024** and has authorised and paid‑up share capital of INR 100,000.  The board of directors includes **Priyanshu Jhawar** and **Pujadevi Jhawar**. |
